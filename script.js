@@ -16,6 +16,10 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterNameText = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+
+xpText.innerHTML=xp;
+healthText.innerHTML = health;
+goldText.innerHTML = gold;
 const weapon = [
   {
     name: "stick",
@@ -286,7 +290,7 @@ function pick(guess) {
   } else {
     text.innerHTML += "wrong! You lose 10 health!";
     health -= 10;
-    goldText.innerHTML = health;
+    healthText.innerHTML = health;
     if (health <= 0) {
       lose();
     }
